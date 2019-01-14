@@ -8,6 +8,7 @@ class ViewController: UIViewController,GMSPlacePickerViewControllerDelegate {
     @IBOutlet weak var postalCodeLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var localAreaNameLabel: UILabel!
     
 
     var latlong:CLLocationCoordinate2D!
@@ -32,12 +33,13 @@ class ViewController: UIViewController,GMSPlacePickerViewControllerDelegate {
         
         
         //This Function Will get all the address from marker locations
-        fetchCityAndCountry(from: location) { city, country, postalcode, error in
-            guard let city = city, let country = country , let postalcode = postalcode , error == nil else { return }
-            print(city + ", " + country + ", " +  postalcode) // Rio de Janeiro, Brazil , 18409
+        fetchCityAndCountry(from: location) { city, country, postalcode, address, error in
+            guard let city = city, let country = country , let postalcode = postalcode , let areaName = address , error == nil else { return }
+            print(city + ", " + country + ", " +  postalcode + ", " + areaName) // Rio de Janeiro, Brazil , 18409 , sector 20
             self.cityLabel.text = city
             self.countryLabel.text = country
             self.postalCodeLabel.text = postalcode
+            self.localAreaNameLabel.text = areaName
             
         }
         
@@ -59,11 +61,12 @@ class ViewController: UIViewController,GMSPlacePickerViewControllerDelegate {
         print("No place selected")
     }
     
-    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?,_ postalCode: String?, _ error: Error?) -> ()) {
+    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?,_ postalCode: String?,_ address:String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
             completion(placemarks?.first?.locality,
                        placemarks?.first?.country,
                        placemarks?.first?.postalCode,
+                       placemarks?.first?.subLocality,
                        error)
         }
     }

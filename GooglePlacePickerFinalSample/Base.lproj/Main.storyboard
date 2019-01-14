@@ -27,26 +27,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-eC-vWk">
-                                <rect key="frame" x="67" y="140" width="239" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="t0b-Vd-Ep6"/>
-                                    <constraint firstAttribute="width" constant="239" id="uPz-s6-Pgn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-FO-BbF">
-                                <rect key="frame" x="68" y="216" width="239" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="239" id="BOo-6V-GeO"/>
-                                    <constraint firstAttribute="height" constant="49" id="rkK-p7-O14"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-zN-tZH">
                                 <rect key="frame" x="145" y="515" width="83" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +37,36 @@
                                     <action selector="pickPlaceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sow-4g-XgE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Area Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-NN-yyQ">
+                                <rect key="frame" x="52" y="136" width="270" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Imp-Yk-ZnK"/>
+                                    <constraint firstAttribute="height" constant="56" id="vt7-pE-02Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-eC-vWk">
+                                <rect key="frame" x="67" y="223" width="239" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="t0b-Vd-Ep6"/>
+                                    <constraint firstAttribute="width" constant="239" id="uPz-s6-Pgn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-FO-BbF">
+                                <rect key="frame" x="68" y="299" width="239" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="BOo-6V-GeO"/>
+                                    <constraint firstAttribute="height" constant="49" id="rkK-p7-O14"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -65,12 +75,15 @@
                             <constraint firstItem="58r-wn-uAN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="J88-IQ-yps"/>
                             <constraint firstItem="OoB-zN-tZH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="JxE-9t-tOy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OoB-zN-tZH" secondAttribute="bottom" constant="122" id="LzW-5M-IJ0"/>
-                            <constraint firstItem="ehy-eC-vWk" firstAttribute="top" secondItem="58r-wn-uAN" secondAttribute="bottom" constant="36" id="cTA-k8-pdO"/>
+                            <constraint firstItem="ar4-NN-yyQ" firstAttribute="top" secondItem="58r-wn-uAN" secondAttribute="bottom" constant="32" id="Ve4-W7-dPs"/>
+                            <constraint firstItem="ehy-eC-vWk" firstAttribute="top" secondItem="ar4-NN-yyQ" secondAttribute="bottom" constant="31" id="Zvr-HD-6fi"/>
                             <constraint firstItem="dYS-FO-BbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="eui-lL-yhO"/>
+                            <constraint firstItem="ar4-NN-yyQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="fsc-2e-mJ2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OoB-zN-tZH" secondAttribute="trailing" constant="147" id="hu8-6J-e6F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehy-eC-vWk" secondAttribute="trailing" constant="69" id="ku7-ex-3mO"/>
                             <constraint firstItem="dYS-FO-BbF" firstAttribute="top" secondItem="ehy-eC-vWk" secondAttribute="bottom" constant="40" id="pn0-ku-OwE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="58r-wn-uAN" secondAttribute="trailing" constant="108" id="tfP-9a-BKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar4-NN-yyQ" secondAttribute="trailing" constant="53" id="uMe-dX-gUc"/>
                             <constraint firstItem="58r-wn-uAN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="zeE-WZ-8hS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,6 +91,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="ehy-eC-vWk" id="hUN-Ci-TI9"/>
                         <outlet property="countryLabel" destination="dYS-FO-BbF" id="9ow-aj-07y"/>
+                        <outlet property="localAreaNameLabel" destination="ar4-NN-yyQ" id="zhs-63-v1d"/>
                         <outlet property="postalCodeLabel" destination="58r-wn-uAN" id="iqq-0s-Af5"/>
                     </connections>
                 </viewController>
